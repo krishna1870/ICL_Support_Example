@@ -23,7 +23,7 @@ candidate_example_num_total=-1 \
 candidate_example_num_every_label=3 \
 direct_plus=$direct_plus \
 diversity_score_scale=$diversity_score_scale \
-bash commands/run_filter_and_search.sh
+bash run_filter_and_search.sh
 
 done
 done
