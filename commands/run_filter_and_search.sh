@@ -14,9 +14,9 @@ echo "direct_plus=$direct_plus"
 echo "diversity_score_scale=$diversity_score_scale"
 
 
-if [ $ptm_name = "EleutherAI/gpt-neo-1.3B" ]
+if [ $ptm_name = "mistralai/Mistral-7B-Instruct-v0.1" ]
 then
-  ptm_name_2="EleutherAI_gpt-neo-1.3B"
+  ptm_name_2="mistralai/Mistral-7B-Instruct-v0.1"
   else
     ptm_name_2=$ptm_name
 fi
