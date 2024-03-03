@@ -1,5 +1,6 @@
 echo "CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES"
 diversity_score_scale=4
+ptm_name=mistralai
 
 for template_idx in 0 1 2 3
 do
@@ -7,8 +8,7 @@ for method in direct
 do
 for direct_plus in 0 1
 do
-for ptm_name in gpt2-large
-do
+
 
 task=agnews \
 template_idx=$template_idx \
