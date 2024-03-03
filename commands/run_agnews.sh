@@ -1,6 +1,6 @@
 echo "CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES"
 diversity_score_scale=4
-ptm_name=mistralai
+ptm_name="mistralai/Mistral-7B-Instruct-v0.1"
 
 for template_idx in 0 1 2 3
 do
