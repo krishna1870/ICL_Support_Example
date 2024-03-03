@@ -259,8 +259,8 @@ def transform_loss_matrix_into_final_loss(loss_matrix, indication_y_s, args, use
 
 
 def main(logger, args):
-    tokenizer = AutoTokenizer.from_pretrained(args.gpt2)
-    model = AutoModelForCausalLM.from_pretrained(args.gpt2)
+    tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.1")
+    model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-Instruct-v0.1")
     n_gpu = torch.cuda.device_count()
     if torch.cuda.is_available():
         model = model.cuda()
@@ -268,7 +268,7 @@ def main(logger, args):
         model = torch.nn.DataParallel(model)
     model.eval()
 
-    logger.info('ptm_name:{}'.format(args.gpt2))
+    logger.info('ptm_name:{}'.format("mistralai/Mistral-7B-Instruct-v0.1"))
     logger.info('ptm param_num: {}'.format(sum(p.numel() for p in model.parameters())))
 
     if args.train_task is None:
