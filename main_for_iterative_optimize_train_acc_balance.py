@@ -194,7 +194,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--test_at_which_iter', choices=['every_iter', 'last', 'first_last'], default='first_last')
     parser.add_argument('--batch_size', type=int, required=True)
-    parser.add_argument('--ptm_name', choices=['gpt2-large', 'gpt2-medium','EleutherAI/gpt-neo-1.3B'], required=True)
+    parser.add_argument('--ptm_name', choices=["mistralai/Mistral-7B-Instruct-v0.1"], required=True)
 
     parser.add_argument('--direct_plus', type=int, required=True)
 
