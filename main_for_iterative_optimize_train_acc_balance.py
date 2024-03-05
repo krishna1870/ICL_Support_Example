@@ -237,7 +237,7 @@ if __name__ == '__main__':
             args.task)
 
     test_examples = load_data_by_fp(args.task, task_test_fp)
-
+    print(args.input_dir.split('/')[5].replace('template_', '').replace('tempalte_', ''))
     args.template_idx = int(args.input_dir.split('/')[5].replace('template_', '').replace('tempalte_', ''))
     assert args.template_idx >= 0 and args.template_idx <= 3, args.template_idx
 
