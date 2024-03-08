@@ -711,6 +711,7 @@ if __name__ == '__main__':
                         handlers=handlers)
     logger = logging.getLogger(__name__)
     # logger.info(args)
+    print("hhdjwldjwhdhdjncenc")
 
     # 打印args，基础操作
     logger.info('start print args')
