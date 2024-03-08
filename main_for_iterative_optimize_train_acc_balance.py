@@ -235,13 +235,17 @@ if __name__ == '__main__':
     if not os.path.exists(task_test_fp):
         task_test_fp = 'test_data/{}/test.csv'.format(
             args.task)
-
+    ans=args.input_dir.split('/')
+    y=0
+    for i in ans:
+      print(y)
+      print(i)
     test_examples = load_data_by_fp(args.task, task_test_fp)
     print(args.input_dir.split('/')[5].replace('template_', '').replace('tempalte_', ''))
     args.template_idx = int(args.input_dir.split('/')[6].replace('template_', '').replace('tempalte_', ''))
     assert args.template_idx >= 0 and args.template_idx <= 3, args.template_idx
 
-    assert args.ptm_name.replace('/','_') == "mistralai/Mistral-7B-Instruct-v0.1", \
+    assert args.ptm_name.replace('/','_') == "mistralai_Mistral-7B-Instruct-v0.1", \
         'args.ptm_name={}, ptm_name in input_dir={}'.format(args.ptm_name, args.input_dir.split('/')[2])
     args.method = args.input_dir.split('/')[4]
 
