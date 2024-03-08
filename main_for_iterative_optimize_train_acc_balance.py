@@ -246,8 +246,8 @@ if __name__ == '__main__':
     args.template_idx = int(args.input_dir.split('/')[6].replace('template_', '').replace('tempalte_', ''))
     assert args.template_idx >= 0 and args.template_idx <= 3, args.template_idx
 
-    assert args.ptm_name.replace('/','_') == "mistralai_Mistral-7B-Instruct-v0.1", \
-        'args.ptm_name={}, ptm_name in input_dir={}'.format(args.ptm_name, args.input_dir.split('/')[2])
+    # assert args.ptm_name.replace('/','_') == "mistralai_Mistral-7B-Instruct-v0.1", \
+    #     'args.ptm_name={}, ptm_name in input_dir={}'.format(args.ptm_name, args.input_dir.split('/')[2])
     args.method = args.input_dir.split('/')[4]
 
     assert args.verify_metric == 'acc'
