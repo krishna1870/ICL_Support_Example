@@ -239,6 +239,7 @@ if __name__ == '__main__':
     y=0
     for i in ans:
       print(y)
+      y+=1
       print(i)
     test_examples = load_data_by_fp(args.task, task_test_fp)
     print(args.input_dir.split('/')[5].replace('template_', '').replace('tempalte_', ''))
