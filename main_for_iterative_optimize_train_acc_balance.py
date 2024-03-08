@@ -226,7 +226,7 @@ if __name__ == '__main__':
         args.output_dir = '{}/search_dir'.format(args.input_dir)
     os.makedirs(args.output_dir, exist_ok=True)
 
-    args.task = args.input_dir.split('/')[3]
+    args.task = args.input_dir.split('/')[4]
 
     # if 'gpt'
 
@@ -248,7 +248,7 @@ if __name__ == '__main__':
 
     # assert args.ptm_name.replace('/','_') == "mistralai_Mistral-7B-Instruct-v0.1", \
     #     'args.ptm_name={}, ptm_name in input_dir={}'.format(args.ptm_name, args.input_dir.split('/')[2])
-    args.method = args.input_dir.split('/')[4]
+    args.method = args.input_dir.split('/')[5]
 
     assert args.verify_metric == 'acc'
 
