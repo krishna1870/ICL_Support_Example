@@ -131,6 +131,7 @@ def load_data_by_fp(task, data_fp=None, split='train'):
                         data = list(map(lambda x: [x[0],
                                                     str(int(x[1]) - 1)], data
                                         ))
+                    
 
                 else:
                     for label, text in csv.reader(f):
@@ -164,7 +165,7 @@ def load_data_by_fp(task, data_fp=None, split='train'):
     print('data[0] in text_dataset: {}'.format(data[0]))
     assert np.all([len(dp) == 2 for dp in data])
 
-    return data
+    return data[:50]
 
 
 def get_candidate_indication_pair_loss(args, task, tokenizer, model,
